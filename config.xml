@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns:android="http://schemas.android.com/apk/res/android" id="xyz.gnovation.moseApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Iconz spa</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org" />
+
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="/www/img/iconz spa.jpg"/>
+
+    <!-- Add the following line to enable geolocation -->
+    <plugin name="cordova-plugin-geolocation" source="npm" />
+
+    <!-- Add the platform-specific configuration for Android -->
+    <platform name="android">
+        <allow-intent href="geo:*" />
+        <config-file parent="/" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+    </platform>
+</widget>
